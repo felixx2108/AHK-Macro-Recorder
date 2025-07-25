@@ -7,14 +7,14 @@ SetTitleMatchMode(2)
 DetectHiddenWindows(true)
 ;--------------------------
 if (A_Args.Length < 1) {
-  A_Args.Push("~Record1.ahk")
+  A_Args.Push("Makro1.ahk")
 }
 
 if (A_Args.Length < 2) {
   A_Args.Push("F1")
 }
 
-LogFile := A_Temp "\" A_Args[1]
+LogFile := A_Desktop "\" A_Args[1]
 UpdateSettings
 Recording := false
 Playing := false
@@ -68,7 +68,7 @@ KeyAction(HotkeyName) {
         PlayKeyAction
         break
       }
-    } else if (Duration < 1400) {
+    } else if (Duration < 2000) {
       ShowTip("RECORD")
       if (!GetKeyState(ActionKey)) {
         ShowTip
