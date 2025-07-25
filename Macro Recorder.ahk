@@ -11,11 +11,11 @@ if (A_Args.Length < 1) {
 }
 
 if (A_Args.Length < 2) {
-  A_Args.Push("F1")
+  A_Args.Push("F22")
 }
 
 LogFile := A_Desktop "\" A_Args[1]
-UpdateSettings
+UpdateSettings()
 Recording := false
 Playing := false
 ActionKey := A_Args[2]
